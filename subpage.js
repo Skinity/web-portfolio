@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isHome) {
       window.scrollTo({top: 0, behavior: "smooth"});
     } else {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
   });
 });
