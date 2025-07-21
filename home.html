@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Welcome to my website</title>
+    <link rel="stylesheet" href="homestyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="floating-nav-bar">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a id="home-link">
+                    <span class="nav-item name"> Brian<br>CastroNunez</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <span class="nav-item" id="about-link">About</span>
+                <span class="nav-item" id="resume-link">Resume</span>
+                <span class="nav-item" id="cert-link">Certifications</span>
+                <span class="nav-item" id="links-link">Links</span>
+            </div>
+        </nav>
+    </div>
+    <header>
+        <canvas id ="waveCanvas"></canvas>
+        <div class ="header-content">
+            <h1>Brian Castro Nunez</h1>
+            <p><span id="typing-text"></span><span id="cursor">█</span></p>
+        </div>
+    </header>
+
+    <section class ="slide-in">
+        <h2>Projects</h2>
+        <div class="project" data-project="sdl2-engine">
+            <h3>
+                2D SDL2 Game engine 
+                <span class="tag cpp">C++</span>
+                <span class="tag sdl2">SDL2</span>
+                <span class="tag personal">Personal Project</span>
+            </h3>
+            <p>A simple implementation of a game engine built with SDL2 and C++.</p>
+        </div>
+
+        <div class="project" data-project="forex-simulator">
+            <h3>
+                Forex Trading Simulator
+                <span class="tag cpp">C++</span>
+                <span class="tag imgui">ImGui</span>
+                <span class="tag personal">Personal Project</span>
+            </h3>
+            <p>Real-time trading simulator built in C++ with ImGui.</p>
+        </div>
+
+        <div class="project" data-project="algo-minigame">
+            <h3>
+                Best-path Algorithm showcase
+                <span class="tag cpp">C++</span>
+                <span class="tag gfc">GFC</span>
+                <span class="tag uni">University Project</span>
+            </h3>
+            <p>Minigame showcasing my implementation of Djistraks algorithm for best path calculation.</p>
+        </div>
+
+        <div class="project" data-project="opengl-scene">
+            <h3>
+                OpenGL Scene
+                <span class="tag cpp">C++</span>
+                <span class="tag opengl">OpenGL</span>
+                <span class="tag uni">University Project</span>
+            </h3>
+            <p>OpenGL scene made by playing around with lighting implementations.</p>
+        </div>
+
+        <div class="project" data-project="ckd-calculator">
+            <h3>
+                Kidney CKD-Risk Levels Calculator - Unity App
+                <span class="tag csharp">C#</span>
+                <span class="tag unity">
+                    <img src="assets/UnityLogo.svg" alt="Unity" class="tag-logo">
+                    Unity
+                </span>
+                <span class="tag uni">University Project</span> 
+            </h3>
+            <p>Medical mobile app made for clinicians to use to help them calculate CKD risk levels in patients.</p>
+        </div>
+
+        <div class="project" data-project="unity-shade">
+            <h3>
+                 Shade - Unity Side Scroller 
+                <span class="tag csharp">C#</span>
+                <span class="tag unity">
+                    <img src="assets/UnityLogo.svg" alt="Unity" class="tag-logo">
+                    Unity
+                </span>
+                <span class="tag uni">University Project</span>
+            </h3>
+            <p>Unity mobile game, playing around with switchable dimensions for traversing the world.</p>
+        </div>
+
+        <div class="project" data-project="unreal-F&F">
+        <h3>
+            Fast and the Fury - Unreal racing game
+            <span class="tag unreal">
+                <img src="assets/UnrealLogo.svg" alt="Unreal" class="tag-logo">
+                Unreal
+            </span>
+            <span class="tag uni">University Project</span>
+        </h3>
+        <p>Racing game made in Unreal replicating Monzo GP track.</p>
+        </div>
+
+        <div class="project" data-project="unreal-gol">
+            <h3>
+                Game Of Life - Making my own plugin in Unreal
+                <span class="tag cpp">C++</span>
+                <span class="tag unreal">
+                    <img src="assets/UnrealLogo.svg" alt="Unreal" class="tag-logo">
+                    Unreal
+                </span>
+                <span class="tag uni">University Project</span>
+            </h3>
+            <p>Unreal implementation of Game Of Life logic. </p>
+        </div>
+
+        <div class="project" data-project="html-css-portfolio">
+            <h3>
+                Portfolio - Self learning Html5/Css and Javascript
+                <span class="tag js">JS</span>
+                <div class="tag htmlcss"><span>Html5/Css</span></div>
+                <div class="tag personal">Personal Project</div>
+                </span>
+            </h3>
+            <p>An insight into the making of this online portfolio.</p>
+        </div>
+    </section>
+
+<div id ="loading-screen">
+    <div class="pixel-runner"></div>
+    <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+        <p>Loading project...</p>
+    </div>
+</div>
+<script src="home.js"></script>
+</body>
+</html>

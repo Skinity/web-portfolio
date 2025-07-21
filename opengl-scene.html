@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algo Minigame</title>
+  <link rel="stylesheet" href="subpagestyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="horizontal-scroll opengl-scene">
+  <div id ="floating-nav-bar">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a id="home-link">
+          <span class="nav-item name">Brian<br>CastroNunez</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <span class="nav-item">About</span>
+        <span class="nav-item">Resume</span>
+        <span class="nav-item">Certifications</span>
+        <span class="nav-item">Links</span>
+      </div>
+    </nav>
+  </div>
+      <div class="section-header">
+        <h2 class="project-title">OpenGL Scene</h2>
+        <div class="category-tags">
+          <span class="tag cpp">C++</span>
+          <span class="tag opengl">OpenGL</span>
+          <span class="tag uni">University Project</span>
+        </div>
+      </div>
+  <div class="horizontal-wrapper" tabindex="-1">
+    <section class="panel">
+      <div class="content-row">
+        <div class="text-content">
+          <p><strong><span class="label">Link:</span></strong> <a href="#">Project Link</a></p>
+          <p><strong><span class="label">What I did:</span></strong> Lighting Implementation, Swinging physics, Texture Drawing, Rigged Animation</p>
+          <p><strong><span class="label">Platform:</span></strong> PC</p>
+          <p><strong><span class="label">Engine and Tools:</span></strong> C++, GLSL, OpenGL</p>
+          <p><strong><span class="label">Time on Project:</span></strong> 6 weeks</p>
+        </div>
+        <div class="image-content">
+          <img src="assets/OpenGL_WholeSceneGif.gif" alt="OpenGL Description" class="demo-gif">
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+      <h2>Insight</h2>
+      <p> This project explores core rendering techniques using OpenGL. It uses custom fragment and vertex shaders to control lighting and surface detail.</p>
+      <p>Reflections are handled through environmental maps, giving objects a more natural appearance. A swinging spotlight simulates pendulum motion through simple physics. Shadows are rendered using shadow mapping to add depth to the scene. The focus is on understanding and applying key graphics pipeline concepts.</p>
+      
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+        <h2>Environmental Maps and Reflections</h2>
+        <p class="tight-spacing">The scene uses dynamic cube mapping for real-time reflections. 
+          Six renders capture the environment from each cube face around the object, followed by a seventh main scene pass. 
+          The vertex shader calculates a reflection vector (r = v - 2(n • v)n) and passes it to the fragment shader, 
+          which blends reflection and base texture using mix(). This gives a responsive, subtle reflection effect.</p>
+        <img src="assets/OpenGL_ReflectiveVaseGif.gif" alt="Vase Reflection" class="demo-gif">
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+        <h2>Swinging Mechanics</h2>
+        <p class="tight-spacing">
+          The pendulum motion used to swing the ceiling lamp in the scene was done so that
+          on each frame, the angular position (alpha) and velocity (omega) update based on Hooke's Law.
+          The lamp rotates around a fixed point, then moves back into place. </p>
+        <img src="assets/OpenGL_PendulumGif.gif" alt="Vase Reflection" class="demo-gif">
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+        <h2>Rigged Animation</h2>
+        <p class="tight-spacing">
+          This method uses up to 100 bone matrices, 4x4 transforms stored in a uniform array to animate models.
+          Each Vertex carries bone IDs and weights that indicate how much each bone influences it.
+          the shader blends these bone matrices using the weights to transform vertex positions and normals.
+          This setup supports most animations with efficient GPU processing by applying weighted bone transforms to each vertex.</p>
+        <img src="assets/OpenGL_DanceAnimGif.gif" alt="Vase Reflection" class="demo-gif">
+      </div>
+    </section>
+  </div>
+  <script src="subpage.js" defer></script>
+</body>
+</html>

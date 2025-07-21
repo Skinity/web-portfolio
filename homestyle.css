@@ -1,0 +1,346 @@
+* {
+    scroll-behavior: smooth;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #eee;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    position: relative;
+    background-color: #1f1f1f;
+    padding: 4rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    height: 200px;
+}
+
+canvas#waveCanvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #00bfff;
+}
+
+section {
+    padding: 2rem;
+}
+
+.project {
+    cursor: pointer;
+    position: relative;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #00bfff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,191,255,0.3);
+}
+
+.project::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+
+    border: 2px solid transparent;
+    border-radius: 2px;
+
+    border-image: linear-gradient(90deg, transparent 0%, #00bfff 50%, transparent 100%) 1;
+    animation: trace-border 6s linear infinite;
+}
+
+@keyframes trace-border {
+    
+    0%   { border-image-source: linear-gradient(90deg,  transparent 0%, #00bfff 50%, transparent 100%); }
+    25%  { border-image-source: linear-gradient(180deg, transparent 0%, #00bfff 50%, transparent 100%); }
+    50%  { border-image-source: linear-gradient(270deg, transparent 0%, #00bfff 50%, transparent 100%); }
+    75%  { border-image-source: linear-gradient(360deg, transparent 0%, #00bfff 50%, transparent 100%); }
+    100% { border-image-source: linear-gradient(450deg, transparent 0%, #00bfff 50%, transparent 100%); }
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    color: #ffffff;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #111;
+    color: #00bfff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#loading-screen.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.loading-bar-container {
+    width: 300px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-bar {
+    height: 5px;
+    width: 0%;
+    background: #00bfff;
+    margin-bottom: 10px;
+    transition: width 2s ease;
+}
+
+.pixel-runner {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1rem;
+    background-image: url('assets/runner-sprite.png');
+    background-repeat: no-repeat;
+    background-size: 128px 32px;
+    image-rendering: pixelated;
+    animation: runAnimation 0.6s steps(4) infinite;
+    transform: scale(2);
+    transform-origin: center;
+}
+
+@keyframes runAnimation {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -128px 0;
+    }
+}
+
+.tag {
+  padding: 0.1rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 2px solid;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.tag-logo {
+    width: 16px;
+    height: 16px;
+    vertical-align: -2px;
+    object-fit: contain;
+    image-rendering: auto;
+    filter: brightness(0.9);
+}
+
+/* Tag color variants */
+.tag.cpp {
+  color: #00bfff;
+  border-color: #00bfff;
+}
+
+.tag.csharp {
+  color:#a855f7;
+  border-color:#a855f7;
+}
+
+.tag.unity {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.tag.unreal {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.tag.opengl {
+  color: #2463b4;
+  border-color: #2463b4;
+}
+
+.tag.sdl2 {
+  color: #2463b4;
+  border-color: #2463b4;
+}
+
+.tag.imgui {
+  color:#2463b4;
+  border-color:#2463b4;
+}
+
+.tag.gfc {
+  color: #32cd32;
+  border-color: #32cd32;
+}
+
+.tag.uni {
+  color:#ffc400d0;
+  border-color: #ffc400d0;
+}
+
+.tag.personal {
+  color:#d31947d0;
+  border-color: #d31947d0;
+}
+
+.tag.js {
+    color:rgb(224, 164, 11);
+    border-color:rgb(224, 164, 11)
+}
+
+.tag.htmlcss {
+  position: relative;
+  padding: 0.1rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: transparent;
+  background: linear-gradient(120deg, #e44d26 55%, #264de4 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Make border visible using pseudo-element */
+}
+
+.tag.htmlcss::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(120deg, #e44d26 55%, #264de4 50%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+#floating-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(47, 114, 214, 0.1) 50%,  /* Blue top half */
+    rgba(34, 34, 34, 0.1) 50%    /* Grey bottom half */
+  );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 10%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.nav-container span.name {
+  font-family: 'Press Start 2P', monospace;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #00bfff;
+}
+
+.nav-left .name {
+  margin-left: 0;
+}

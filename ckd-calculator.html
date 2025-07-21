@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algo Minigame</title>
+  <link rel="stylesheet" href="subpagestyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="horizontal-scroll ckd-scene">
+  <div id ="floating-nav-bar">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a id="home-link">
+          <span class="nav-item name">Brian<br>CastroNunez</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <span class="nav-item">About</span>
+        <span class="nav-item">Resume</span>
+        <span class="nav-item">Certifications</span>
+        <span class="nav-item">Links</span>
+      </div>
+    </nav>
+  </div>
+      <div class="section-header">
+        <h2 class="project-title">NephroTrack</h2>
+        <div class="category-tags">
+          <span class="tag csharp">C#</span>
+          <span class="tag unity">Unity</span>
+          <span class="tag uni">University Project</span>
+        </div>
+      </div>
+  <div class="horizontal-wrapper" tabindex="-1">
+    <section class="panel">
+      <div class="content-row">
+        <div class="text-content">
+          <p><strong><span class="label">Link:</span></strong> <a href="#">Project Link</a></p>
+          <p><strong><span class="label">What I did:</span></strong> Front-end Developing, UI design, API Integration</p>
+          <p><strong><span class="label">Platform:</span></strong> Mobile (Android)</p>
+          <p><strong><span class="label">Engine and Tools:</span></strong> C#, Unity</p>
+          <p><strong><span class="label">Time on Project:</span></strong> 5 weeks</p>
+        </div>
+        <div class="image-content soft-corner">
+          <img src="assets/NephroTrack_ckd_login.png" alt="NephroTrack Login" class="fade-in-image">
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+      <h2>Insight</h2>
+      <p> We built a CKD risk calculator to support NHS clinicians and informed patients in managing chronic kidney disease.</p>
+      <p> The tool offers quick and clear eGFR results using standard formulas: CKD-EPI, MDRD, 
+        and both the Schwartz Paediatric Full and Bedside (Simplified) equations.
+        It helps clinicians during consultations and enabled experienced patients to monitor their CKD status independently.
+        Developed using an agile approach, the project focused on security, clinical accuracy and user-friendly design.</p>
+      
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column content-column-tight">
+        <div class="content-row content-row-split">
+          <div class="content-text content-text-left">
+            <h2>Functionality</h2>
+            <h3> MDRD Calculator</h3>
+            <p>The MDRD Calculator (2005) estimates eGFR using serum creatinine, age and sex.
+              the formula is:
+              eGFR = 175 x (Scr)^-1.154 x (Age)^-0.203 x 0.742 (if female)</p>
+            <p>Since 2009 the National Kidney Foundation recommended the use of CKD-EPI over MDRD.</p>
+          </div>
+          <div class="image-content soft-corner">
+            <img src="assets/CKD_MDRD.gif" alt="CKD MDRD" class="fade-in-image">
+          </div>
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column content-column-tight">
+        <div class="content-row content-row-split">
+          <div class="content-text content-text-left">
+            <h2>Functionality</h2>
+            <h3> CKD-EPI Calculator</h3>
+            <p>Estimates glomerular filtration rate (eGFR)
+              in adults based on serum creatinine, age, and sex using the CKD-EPI 2021 equation.
+              It provides a more accurate assessment of kidney function than older forumlas, especially at higher GFR levels,
+              and is widely used for diagnosing and staging chronic kindey disease (CKD).
+            </p>
+          </div>
+          <div class="image-content soft-corner">
+            <img src="assets/CKD_EPI.gif" alt="CKD MDRD" class="fade-in-image">
+          </div>
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column content-column-tight">
+        <div class="content-row content-row-split">
+          <div class="content-text content-text-left">
+            <h2>Functionality</h2>
+            <h3> Schwartz "Bedside" (Simple) Calculator</h3>
+            <p>Estimates eGFR (glomerular filtration rate) in children based on height and serum creatinine.
+              It uses the simplified bedside Schwartz formula:
+              eGFR (mL/min/1.73m^2) = 0.413 x (height in cm / serum creatinine in mg/dL)
+            </p>
+          </div>
+          <div class="image-content soft-corner">
+            <img src="assets/CKD_SPB.gif" alt="CKD MDRD" class="fade-in-image">
+          </div>
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column content-column-tight">
+        <div class="content-row content-row-split">
+          <div class="content-text content-text-left">
+            <h2>Functionality</h2>
+            <h3> Schwartz Bedside Full Calculator</h3>
+            <p>Estimates glomerula filtration rate (eGFR) in children using serum creatinine,
+              height, and a constant based on the updated bedside Schwartz formula: eGFR (mL/min/1.73m^2) = 0.413 x (height in cm/ serum creatinine in mg/dL).
+              This helps clinicians asses kidney function in paediatric patients quickly and accurately. 
+            </p>
+          </div>
+          <div class="image-content soft-corner">
+            <img src="assets/CKD_SPF.gif" alt="CKD MDRD" class="fade-in-image">
+          </div>
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+  </div>
+  <script src="subpage.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algo Minigame</title>
+  <link rel="stylesheet" href="subpagestyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="horizontal-scroll">
+  <div id ="floating-nav-bar">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a id="home-link">
+          <span class="nav-item name">Brian<br>CastroNunez</span>
+        </a>
+      </div>
+      <div class="nav-right">
+        <span class="nav-item">About</span>
+        <span class="nav-item">Resume</span>
+        <span class="nav-item">Certifications</span>
+        <span class="nav-item">Links</span>
+      </div>
+    </nav>
+  </div>
+      <div class="section-header">
+        <h2 class="project-title">Dog n Stick</h2>
+        <div class="category-tags">
+          <span class="tag cpp">C++</span>
+          <span class="tag gfc">GFC</span>
+          <span class="tag uni">University Project</span>
+        </div>
+      </div>
+  <div class="horizontal-wrapper" tabindex="-1">
+    <section class="panel">
+      <div class="content-row">
+        <div class="text-content">
+          <p><strong><span class="label">Link:</span></strong> <a href="#">Project Link</a></p>
+          <p><strong><span class="label">What I did:</span></strong> Gameplay programming, UI design</p>
+          <p><strong><span class="label">Platform:</span></strong> PC</p>
+          <p><strong><span class="label">Engine and Tools:</span></strong> C++, In-house university engine</p>
+          <p><strong><span class="label">Time on Project:</span></strong> 2 weeks</p>
+        </div>
+        <div class="image-content">
+          <img src="assets/DogNStick.png" alt="Dog n Stick Screenshot" class="fade-in-image">
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+      <h2>Insight</h2>
+      <p>This project uses Dijkstra’s algorithm to let a dog intelligently fetch a stick and return to the player.</p> 
+      <p>The world is mapped as a graph of nodes, and the dog calculates the shortest route to the stick and back using real-time pathfinding based on its and the target's positions.
+      A simple flag system switches its behavior between chasing and returning.</p>
+      
+      </div>
+      <button class="next-btn" aria-label="Next Section">&gt;</button>
+    </section>
+
+    <section class="panel">
+      <button class="prev-btn" aria-label="Previous Section">&lt;</button>
+      <div class="content-column">
+        <h2>Gameplay</h2>
+        <p>The objective/plot of the game is to exercise your virtual pet (dog) by throwing sticks for him to chase and return to you (player). Each time the dog returns the stick to you, it increases your score.</p>
+        <img src="assets/DognSticksAIprojectVideoGif.gif" alt="Gameplay Description" class="demo-gif">
+    </section>
+  </div>
+
+  <div id="maintenance-screen" class="hidden">
+    <div class="pixel-crier"></div>
+    <p>Section Under Maintenance...</p>
+  </div>
+  
+  <script src="subpage.js" defer></script>
+</body>
+</html>
