@@ -167,14 +167,12 @@ projects.forEach(project => {
     });
 });
 
-// On page load, reset loading screen visibility (hide it)
-window.addEventListener('load', () => {
+window.addEventListener('pageshow', (event) => {
   if (loadingScreen.classList.contains('active')) {
     loadingScreen.classList.remove('active');
     loadingBar.style.width = '0%';
   }
-  
-  // Also reset navBar opacity and pointer events in case
+
   if (typeof navBar !== 'undefined' && navBar) {
     navBar.style.opacity = '';
     navBar.style.pointerEvents = '';
