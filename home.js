@@ -138,9 +138,9 @@ function randomDelay(min = 40, max = 100) {
 window.addEventListener("load", typeHumanLike);
 
 //-------------------------------------------------------------------------------------
-
 //Loading screen
 let isNavigatingAway = false;
+const currentPage = window.location.pathname.split('/').pop().toLowerCase();
 const projects = document.querySelectorAll('.project');
 const loadingScreen = document.getElementById('loading-screen');
 const loadingBar = document.querySelector('.loading-bar');
@@ -165,6 +165,20 @@ projects.forEach(project => {
             console.log("Loaded:", projectId); // Debug placeholder
         }, 2200);
     });
+});
+
+// On page load, reset loading screen visibility (hide it)
+window.addEventListener('load', () => {
+  if (loadingScreen.classList.contains('active')) {
+    loadingScreen.classList.remove('active');
+    loadingBar.style.width = '0%';
+  }
+  
+  // Also reset navBar opacity and pointer events in case
+  if (typeof navBar !== 'undefined' && navBar) {
+    navBar.style.opacity = '';
+    navBar.style.pointerEvents = '';
+  }
 });
 
 //-------------------------------------------------------------------------------------
